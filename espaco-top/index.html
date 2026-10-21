@@ -633,7 +633,7 @@ body.no-tips .tip{display:none}
 </script>
 <script>window.LEADS = {"itens":[{"id":"g62991067030","lote":"ultra","descoberto":"2026-10-19","prio":"Média","porque":"não aparece site no perfil do Google (verificado em 19/10/2026)","uf":"GO","nome":"Espaço Top - Cabeleireiros","nicho":"Salão de beleza","categoria":"Salão de Beleza","bairro":"","regiao":"","cidade":"Goiânia","end":"","tel":"(62) 99106-7030","tipo":"Celular","nota":4.8,"aval":28,"anos":10,"cit":"","sit":"nao","siteSt":2,"siteMotivo":"não aparece site no perfil do Google (verificado em 19/10/2026)","sinais":"sem site no perfil do Google · 28 avaliações, nota 4,8 · 10+ anos no mercado · celular público","contatoFonte":"telefone do perfil da empresa no Google","fonte":"Perfil público no Google (busca local)","ficha":"https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o%20Top%20-%20Cabeleireiros%20Goi%C3%A2nia","chance":75,"chanceMotivo":"A favor: sem site, celular público (provável WhatsApp), 28 avaliações, nota 4,8, nicho forte (beleza), 10+ anos no mercado."}]};</script>
 <script>/* Proposta Prime Site em PDF (usada pelo app Radar Pro e pela página de demonstração).
-   gerarProposta(loja, cfg, demoUrl) monta 3 páginas A4 e baixa o PDF. */
+   gerarProposta(loja, cfg, demoUrl) monta 4 páginas A4 e baixa o PDF. */
 (function () {
   const CDN = {
     canvas: 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js',
@@ -699,7 +699,10 @@ body.no-tips .tip{display:none}
   .pp .plan .tag{position:absolute;top:-12px;left:22px;background:#0f8a4f;color:#fff;font:800 11px/1 Manrope,Arial;letter-spacing:.1em;padding:6px 10px;border-radius:99px}
   .pp .plan .old{color:#c2410c;text-decoration:line-through;font-size:14px;font-weight:700}
   .pp .plan .price{font:800 28px/1 'Bricolage Grotesque',Arial;margin:4px 0 6px;color:#16201a}
-  .pp .plan ul{margin:10px 0 0;padding-left:18px;font-size:14px;color:#3b463f;line-height:1.6}
+  .pp .plan ul{margin:10px 0 0;padding-left:18px;font-size:13px;color:#3b463f;line-height:1.45}
+  .pp .cond{display:grid;gap:8px;margin-bottom:26px}
+  .pp .cond div{display:grid;grid-template-columns:130px 1fr;gap:14px;background:#f3f5f2;border-radius:12px;padding:8px 14px;font-size:13px;line-height:1.45;color:#3b463f}
+  .pp .cond b{color:#16201a}
   .pp .contact{display:flex;justify-content:space-between;align-items:center;background:#0f8a4f;color:#fff;border-radius:18px;padding:18px 22px}
   .pp .contact b{font:800 20px/1.2 'Bricolage Grotesque',Arial;color:#fff}
   .pp .pfoot{position:absolute;left:64px;right:64px;bottom:26px;display:flex;justify-content:space-between;font-size:11px;color:#8a958e}
@@ -730,7 +733,7 @@ body.no-tips .tip{display:none}
 
     const capa = document.createElement('div');
     capa.style.cssText = 'position:fixed;inset:0;z-index:2147483647;background:rgba(6,30,18,.92);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font:800 18px/1.3 Manrope,Arial,sans-serif;text-align:center;padding:24px';
-    capa.innerHTML = '<div style="width:34px;height:34px;border:3px solid #fff;border-right-color:transparent;border-radius:50%;animation:ppgira .8s linear infinite"></div><div>Montando a proposta da ' + esc(nome) + '…</div><div style="font-weight:600;font-size:14px;opacity:.75">3 páginas em PDF, leva uns segundos</div><style>@keyframes ppgira{to{transform:rotate(360deg)}}</style>';
+    capa.innerHTML = '<div style="width:34px;height:34px;border:3px solid #fff;border-right-color:transparent;border-radius:50%;animation:ppgira .8s linear infinite"></div><div>Montando a proposta da ' + esc(nome) + '…</div><div style="font-weight:600;font-size:14px;opacity:.75">4 páginas em PDF, leva uns segundos</div><style>@keyframes ppgira{to{transform:rotate(360deg)}}</style>';
     document.body.appendChild(capa);
     const box = document.createElement('div');
     box.style.cssText = 'position:absolute;left:0;top:0;width:794px;z-index:-1';
@@ -751,7 +754,7 @@ body.no-tips .tip{display:none}
           <div class="box"><div class="n">03</div><h3>Pronto pro Google</h3><p>Estrutura pra ser encontrado na sua região.</p></div>
           <div class="box"><div class="n">04</div><h3>Sua identidade</h3><p>Cores, fotos e textos do seu negócio, nada genérico.</p></div>
         </div>
-        <div class="pfoot"><span>Prime Site · proposta para ${esc(nome)}</span><span>2/3</span></div>
+        <div class="pfoot"><span>Prime Site · proposta para ${esc(nome)}</span><span>2/4</span></div>
       </div>
       <div class="pg">
         <div class="eyb">Sua demonstração</div><h2>A gente já começou o site da ${esc(nome)}</h2>
@@ -760,10 +763,14 @@ body.no-tips .tip{display:none}
         <div class="checks"><div>${bel ? 'Serviços com preço' : 'Cardápio com preços'}</div><div>Galeria com suas fotos</div><div>Botão direto pro WhatsApp</div><div>Horário e endereço com mapa</div><div>Contatos organizados</div><div>Link pra bio do Instagram</div></div>
         <div class="eyb">Como funciona</div>
         <div class="steps"><div class="st"><b>1</b><span>Você aprova a demonstração</span></div><div class="st"><b>2</b><span>Manda fotos e informações</span></div><div class="st"><b>3</b><span>Ajustamos até ficar do seu jeito</span></div><div class="st"><b>4</b><span>Pagamento conforme o plano escolhido</span></div></div>
-        ${planos ? `<div class="plans">${['essencial', 'profissional', 'premium'].map(k => { const p = planos[k]; return `<div class="plan${k === ps ? ' best' : ''}">${k === ps ? '<span class="tag">PLANO DA PROPOSTA</span>' : ''}<div class="price">${brl(p.pr)}</div><p><b>${esc(p.n)}</b></p><ul>${linhas(p.in).slice(0, 5).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`; }).join('')}</div>
-        <p style="font-size:12.5px;margin:-10px 0 20px;color:#3b463f"><b>${esc(planoSel.n)}:</b> ${esc(planoSel.pg || 'condições de pagamento na proposta')}. Prazo de até ${esc(planoSel.pz)} dias úteis após o recebimento do material. ${planoSel.dm ? 'Domínio: ' + esc(planoSel.dm) + '. ' : ''}${planoSel.ex ? 'Não incluído: ' + esc(linhas(planoSel.ex).join('; ')) + '.' : ''}</p>` : '<div class="plan" style="margin-bottom:24px"><p><b>Valores e condições</b> definidos na proposta enviada junto com este documento.</p></div>'}
+        <div class="pfoot"><span>Prime Site · proposta para ${esc(nome)}</span><span>3/4</span></div>
+      </div>
+      <div class="pg">
+        <div class="eyb">Valores</div><h2>Planos para a ${esc(nome)}</h2>
+        ${planos ? `<div class="plans">${['essencial', 'profissional', 'premium'].map(k => { const p = planos[k]; return `<div class="plan${k === ps ? ' best' : ''}">${k === ps ? '<span class="tag">PLANO DA PROPOSTA</span>' : ''}<div class="price">${brl(p.pr)}</div><p><b>${esc(p.n)}</b></p><ul>${linhas(p.in).map(x => `<li>${esc(x)}</li>`).join('')}</ul><p style="font-size:12.5px;margin-top:10px">Prazo: até ${esc(p.pz)} dias úteis · ${esc(p.rv)} revisão(ões) · suporte de ${esc(p.su)} dias</p></div>`; }).join('')}</div>
+        <div class="eyb" style="margin-top:6px">Condições do plano ${esc(planoSel.n)}</div><div class="cond">${[['Pagamento', planoSel.pg || 'conforme a proposta'], ['Prazo', 'até ' + planoSel.pz + ' dias úteis após o recebimento do material'], ['Domínio', planoSel.dm ? String(planoSel.dm).replace(/^Domínio\s*/i, '') : ''], ['Hospedagem', planoSel.hp], ['Não incluído', linhas(planoSel.ex).join('; ')]].filter(x => x[1]).map(([a, b]) => `<div><b>${a}</b><span>${esc(b)}</span></div>`).join('')}</div>` : '<div class="plan" style="margin-bottom:24px"><p><b>Valores e condições</b> definidos na proposta enviada junto com este documento.</p></div>'}
         <div class="contact"><div><b>Vamos colocar a ${esc(nome)} na internet?</b><p style="color:#dff3e7;margin-top:4px">${planoSel ? esc(planoSel.n + ' · ' + brl(planoSel.pr)) : "Valores na proposta"}</p></div><div style="text-align:right"><b>${esc(zapFmt)}</b><p style="color:#dff3e7;margin-top:4px">WhatsApp · @prime.site_oficial</p></div></div>
-        <div class="pfoot"><span>Prime Site · proposta para ${esc(nome)}</span><span>3/3</span></div>
+        <div class="pfoot"><span>Prime Site · proposta para ${esc(nome)}</span><span>4/4</span></div>
       </div></div>`;
     document.body.appendChild(box);
     if (demoUrl && window.QRCode) { try { new QRCode(box.querySelector('#ppqr'), { text: demoUrl, width: 130, height: 130, correctLevel: QRCode.CorrectLevel.M }); } catch (e) {} }
